@@ -1,0 +1,35 @@
+﻿@model Assessment7a.Models.Species
+
+@{
+    ViewData["Title"] = "Species";
+}
+
+<h1>Species</h1>
+
+<div>
+  
+    <hr />
+  
+    <dl class="row">
+        <dt class="col-sm-2">
+            Name
+        </dt>
+        <dd class="col-sm-10">
+            @Model.name
+        </dd>
+        <dt class="col-sm-2">
+            Diet
+        </dt>
+        <dd class="col-sm-10">
+            @Model.diet
+        </dd>
+        <dt class="col-sm-2">
+            Habitat
+        </dt>
+        <dd class="col-sm-10">
+            @Model.habitat
+        </dd>
+    </dl>
+    
+</div>
+

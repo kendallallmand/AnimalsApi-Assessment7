@@ -1,0 +1,28 @@
+﻿@model Animals
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<hr />
+@foreach (Result name in Model.results)
+{
+    <hr />
+    <p>Name: @name.name</p>
+    <p>Weight: @name.weight lbs</p>
+    <p>Species: @name.species.name</p>
+    <hr />
+}
+<hr />
+
+<form action="/Home/Species" method="get">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputName-sizing">Species</span>
+        </div>
+        <input type="text" name="SpeciesName" value="@ViewBag.Q" class="form-control">
+        <div class="input-group-append">
+            <input type="submit" class="btn btn-primary" value="Search!" />
+        </div>
+    </div>
+</form>
